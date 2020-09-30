@@ -1,150 +1,41 @@
-######################## default configuration ####################
-baseURL = ""
-languageCode = "en-us"
-title = "Restaurant Hugo"
-theme = "restaurant-hugo"
-summaryLength = "10"
-paginate = 4
+baseURL = "https://example.com"
 
-############################# Plugins ##############################
+# This is a "one page"-website, so we do not need these kinds of pages...
+disableKinds = ["section", "taxonomy", "term", "RSS", "robotsTXT"]
 
-# CSS Plugins
-[[params.plugins.css]]
-URL = "css/bootstrap.min.css"
-[[params.plugins.css]]
-URL = "css/slick.css"
-[[params.plugins.css]]
-URL = "css/font-awesome.min.css"
-[[params.plugins.css]]
-URL = "css/animate.min.css"
-[[params.plugins.css]]
-URL = "css/venobox.css"
-[[params.plugins.css]]
-URL = "css/main.css"
-[[params.plugins.css]]
-URL = "css/responsive.css"
+defaultContentLanguage = "en"
 
-# JS Plugins
-[[params.plugins.js]]
-URL = "js/jquery.min.js"
-[[params.plugins.js]]
-URL = "js/bootstrap.min.js"
-[[params.plugins.js]]
-URL = "js/slick.min.js"
-[[params.plugins.js]]
-URL = "js/wow.min.js"
-[[params.plugins.js]]
-URL = "js/venobox.min.js"
-[[params.plugins.js]]
-URL = "js/main.js"
+# The name of this wonderful theme ;-).
+theme = "hugo-scroll"
 
-############################## navigation ###############################
+# The "title" of your website
+title = "Jane Doe - Nutrition Coach & Chef Consultant"
 
-[[menu.main]]
-name = "Home"
-URL = "hero-area"
-weight = 1
-
-[[menu.main]]
-name = "About Us"
-URL = "about-us"
-weight = 2
-
-[[menu.main]]
-name = "Blog"
-URL = "blog"
-weight = 3
-
-[[menu.main]]
-name = "Price"
-URL = "price"
-weight = 4
-
-[[menu.main]]
-name = "News"
-URL = "subscribe"
-weight = 5
-
-[[menu.main]]
-name = "Contact Us"
-URL = "contact-us"
-weight = 6
-
-
-#################### default parameters ################################
 [params]
-logo = "images/logo.png"
-# meta data
-author = "Themefisher"
-description = "This is meta description"
-# google analitycs ID
-google_analitycs_id = "Your ID"
-# mainSections
-main_sections = ["post"]
-# copyright
-copyright = "Copyright &copy; 2020 Designed by [Themefisher](https://themefisher.com) & Developed by [Gethugothemes](https://gethugothemes.com)"
+    # A "copyright"-line to be added at the bottom of the page.
+    # Hint: Markdown is supported in here as well. So you may e.g. add a link to your legal imprint-page.
+    copyright = "© Jane Doe"
 
-# Preloader
-[params.preloader]
-enable = false
-preloader = "" # use .png , .svg or .gif format
+    # The "description" of your website. This is used in the meta data of your generated html.
+    description = "Nutrition Coach & Chef Consultant"
 
-################################### Footer ############################
-[params.footer]
-enable = true
-contactInfoTitle = "CONTACT <span>INFO</span> "
-blogTitle = "LATEST <span>BLOG POSTS</span>"
-galleryTitle = "PHOTO <span>STREAM</span>"
-socialTitle = "Follow <span>US</span>"
+    # The path to your "favicon". This should be a square (at least 32px x 32px) png-file.
+    favicon = "images/favicon.png"
 
-############################ footer contact item
-[[params.footer.contactItem]]
-title="Telephone"
-icon = "fa fa-phone"
-content = "016742 323313"
+    # These "images" are used for the structured data templates. This will show up, when
+    # services like Twitter or Slack want to generate a preview of a link to your site.
+    # See https://gohugo.io/templates/internal#twitter-cards and
+    # https://gohugo.io/templates/internal#open-graph.
+    images = ["images/cover-image.jpg"]
 
-[[params.footer.contactItem]]
-title="Address"
-icon = "fa fa-map-marker"
-content = "2046 Blue Spruce Lane Laurel Canada"
+    # Another "title" :-). This one is used as the site_name on the Hugo's internal
+    # opengraph structured data template.
+    # See https://ogp.me/ and https://gohugo.io/templates/internal#open-graph.
+    title = "Jane Doe - Nutrition Coach & Chef Consultant"
 
-[[params.footer.contactItem]]
-title="E mail"
-icon = "fa fa-envelope"
-content = "rest@gmail.com - rest@mail.ru"
+    # This theme will, by default, inject a design-by-line at the bottom of the page.
+    # You can turn it off, but we would really appreciate if you don’t :-)
+    # hidedesignbyline = true
 
-######################### footer gallery
-[[params.footer.gallery]]
-image = "images/slider/slider-img-1.jpg"
-
-[[params.footer.gallery]]
-image = "images/slider/slider-img-2.jpg"
-
-[[params.footer.gallery]]
-image = "images/slider/slider-img-3.jpg"
-
-[[params.footer.gallery]]
-image = "images/slider/slider-img-4.jpg"
-
-[[params.footer.gallery]]
-image = "images/slider/slider-img-1.jpg"
-
-[[params.footer.gallery]]
-image = "images/slider/slider-img-2.jpg"
-
-######################## Social Icon 
-[[params.footer.socialLink]]
-icon = "facebook"
-link = "https://fb.com/themefisher"
-
-[[params.footer.socialLink]]
-icon = "twitter"
-link = "https://fb.com/themefisher"
-
-[[params.footer.socialLink]]
-icon = "dribbble"
-link = "https://fb.com/themefisher"
-
-[[params.footer.socialLink]]
-icon = "instagram"
-link = "https://fb.com/themefisher"
+    [params.meta]
+        keywords = "some, keywords, for, seo, you, know, google, duckduckgo, and, such"
